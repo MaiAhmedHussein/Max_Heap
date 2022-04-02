@@ -35,16 +35,16 @@ public class Heap {
         int max;
         int left = 2*ind;
         int right = 2*ind +1;
-        if(left<=arrSize && arr[left]>arr[ind]){
+        if(left<=arrSize-1 && arr[left]>arr[ind]){
             max=left;
         }else {
             max=ind;
         }
-        if(right<=arrSize && arr[right]>arr[max]){
+        if(right<=arrSize-1 && arr[right]>arr[max]){
             max=right;
         }
         if(max!=ind){
-            swap(arr,arr[ind],arr[max]);
+            swap(arr,ind,max);
             max_Heapify(arr,max,arrSize);
         }
     }
