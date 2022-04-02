@@ -61,7 +61,7 @@ public class Main {
                     String str = sc.nextLine();
                     String[] s=str.split(" ");
                     for (int i = 0; i < s.length; i++) {
-                        ob.insert( Integer.valueOf(s[i]));
+                        ob.max_heap_insert( Integer.valueOf(s[i]));
                     }
 
                     System.out.println("Array after insertion:");

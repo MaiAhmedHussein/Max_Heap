@@ -17,7 +17,7 @@ public class PQ {
         }
     }
 
-    public void insert(int no) {
+    public void max_heap_insert(int no) {
         heap[size] = no;
         heapifyBottomUp(size);
         size++;
