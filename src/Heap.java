@@ -33,8 +33,8 @@ public class Heap {
             return ;
         }
         int max;
-        int left = 2*ind;
-        int right = 2*ind +1;
+        int left = 2*ind+1;
+        int right = 2*ind+2;
         if(left<=arrSize-1 && arr[left]>arr[ind]){
             max=left;
         }else {
