@@ -70,6 +70,17 @@ public class Analysis {
         System.out.println("------------------------------------------------------------------");
 
        // System.out.println("array after merge sort : " +Arrays.toString(array));
+         array=  Arrays.copyOf(arr,arr.length);
+        long startSelection = System.nanoTime();
+
+        selection.sort(array);
+
+        long endSelection = System.nanoTime();
+        System.out.println("execution time for  Selection Sort: " + (endSelection - startSelection) + " nanosecond\n");
+        // System.out.println("array after Insertion  sort : " +Arrays.toString(array));
+
+
+        System.out.println("------------------------------------------------------------------");
 
 
     }
