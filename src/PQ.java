@@ -24,8 +24,8 @@ public class PQ {
     }
 
     public int Heap_Extract_Max(){
-        int temp = heap[1];
-        heap[1] = heap[size-1];
+        int temp = heap[0];
+        heap[0] = heap[size-1];
         size--;
         Heap obj = new Heap();
         obj.max_Heapify(heap,0,size);
