@@ -1,7 +1,7 @@
 package SortingTechniques;
 
 public class MergeSort {
-    public void sort(int []array){
+    public void sort(int[] array) {
         //base case array with single item
         if(array.length<2)
             return;
@@ -19,18 +19,25 @@ public class MergeSort {
         //merge the result
         merge(left,right,array);
     }
-    private void merge(int[]left ,int []right, int[]result){
-        //need three pointers
-        int l=0,r=0,res=0;
-        while(l< left.length&& r< right.length){
-            if(left[l]<=right[r])
-                result[res++]=left[l++];
+
+    private void merge(int[] left, int[] right, int[] result) {
+        int i = 0, j = 0, k = 0;
+
+        while (i < left.length && j < right.length) {
+            if (left[i] <= right[j])
+                result[k++] = left[i++];
             else
-                result[res++]=right[r++];
+                result[k++] = right[j++];
         }
-        while(l< left.length)
-            result[res++]=left[l++];
-        while(r<right.length)
-            result[res++]=right[r++];
+
+        while (i < left.length)
+            result[k++] = left[i++];
+
+        while (j < right.length)
+            result[k++] = right[j++];
     }
 }
+
+
+
+
