@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] arg) {
         Heap maxHeap = new Heap();
         Analysis an=new Analysis();
-        an.analysis(10);
+        an.analysis(1000);
 
 
     }
