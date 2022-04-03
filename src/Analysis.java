@@ -16,7 +16,7 @@ public class Analysis {
 
     public void analysis(int size) {
         int[] arr = generate_DataSet(size);
-
+        System.out.println("Random Data set generated \n" +Arrays.toString(arr));
 
         Heap heap = new Heap();
         BubbleSort bubble = new BubbleSort();
@@ -30,7 +30,8 @@ public class Analysis {
         long startheap = System.nanoTime();
         heap.HEAPSORT(array);
         long endheap = System.nanoTime();
-        System.out.println("execution time for  heap Sort: " + (endheap - startheap) + " nanosecond\n");
+        System.out.println("\nexecution time for  heap Sort: " + (endheap - startheap) + " nanosecond\n");
+        System.out.println("array after heap sort : " +Arrays.toString(array));
         System.out.println("------------------------------------------------------------------");
 
         //////////////////////////////////////////////////////////////////////
@@ -39,6 +40,7 @@ public class Analysis {
         merge.sort(array);
         long endMerge = System.nanoTime();
         System.out.println("execution time for  Merge Sort: " + (endMerge - startMerge) + " nanosecond\n");
+        System.out.println("array after Merge sort : " +Arrays.toString(array));
         System.out.println("------------------------------------------------------------------");
 
         //////////////////////////////////////////////////////////////////////////////////
@@ -47,6 +49,7 @@ public class Analysis {
         quick.sort(array);
         long endQuick = System.nanoTime();
         System.out.println("execution time for  Quick Sort: " + (endQuick - startQuick) + " nanosecond\n");
+        System.out.println("array after QuickSort  sort : " +Arrays.toString(array));
         System.out.println("------------------------------------------------------------------");
 
         //////////////////////////////////////////////////////////////////////////////////
@@ -56,6 +59,7 @@ public class Analysis {
         bubble.sort(array);
         long endBubble = System.nanoTime();
         System.out.println("execution time for  bubbleSort: " + (endBubble - startBubble) + " nanosecond\n");
+        System.out.println("array after bubbleSort  sort : " +Arrays.toString(array));
         System.out.println("------------------------------------------------------------------");
         ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -64,14 +68,20 @@ public class Analysis {
         insertion.sort(array);
         long endInsertion = System.nanoTime();
         System.out.println("execution time for  Insertion Sort: " + (endInsertion - startInsertion) + " nanosecond\n");
+        System.out.println("array after Insertion  sort : " +Arrays.toString(array));
         System.out.println("------------------------------------------------------------------");
         /////////////////////////////////////////////////////////////////////////////////////////////////
 
         array = Arrays.copyOf(arr, arr.length);
         long startSelection = System.nanoTime();
+
         selection.sort(array);
+
         long endSelection = System.nanoTime();
         System.out.println("execution time for  Selection Sort: " + (endSelection - startSelection) + " nanosecond\n");
+        System.out.println("array after Selection  sort : " +Arrays.toString(array));
+
+
         System.out.println("------------------------------------------------------------------");
 
 
